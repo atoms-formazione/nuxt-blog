@@ -1,9 +1,20 @@
 <script setup lang="ts">
-const formatted = useDateFormat('1675700830', 'DD.MM.YYYY')
+const formatted = useDateFormat('1675700830', 'DD.MM.YYYY');
+const props = defineProps({
+  active: String,
+});
 </script>
 
 <template>
   <p class="text-4xl font-bold text-[#495057]">Popular Topics</p>
+  <div class="flex text-xs font-bold gap-5 text-[#495057]">
+    <p class= "active:text-[#d4a373]">All</p>
+    <p :class="{ active: active === 'adventure' }">Adventure</p>
+    <p :class="{ active: active === 'travel' }">Travel</p>
+    <p :class="{ active: active === 'fashion' }">Fashion</p>
+    <p :class="{ active: active === 'technology' }">Technology</p>
+    <p :class="{ active: active === 'branding' }">Branding</p>
+  </div>
   <div>
     <SingleTopic
       :image="'https://loremflickr.com/640/480/city'"
