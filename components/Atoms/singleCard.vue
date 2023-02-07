@@ -6,7 +6,7 @@
   <div class="">
     <div
       v-if="response"
-      class="grid grid-cols-1 gap-4 p-2 md:grid-cols-2 lg:grid-cols-4 border-2"
+      class="grid grid-cols-1 gap-4 p-2 md:grid-cols-2 lg:grid-cols-4"
     >
       <div v-for="photo in response" class="">
         <NuxtLink :to="`/post/${photo.id}`">
