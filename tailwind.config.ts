@@ -10,6 +10,7 @@ export default <Partial<Config>>{
       "text-white": "#E5E5E5",
       "active-gold": "#D4A373",
       "tag-bg-gray": "rgba(255, 255, 255, 0.15)",
+      "logo-white": "#F8F9FA",
     },
     fontFamily: {
       logo: ["League Spartan", "sans-serif"],
