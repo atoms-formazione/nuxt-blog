@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <SingleBlog />
+  <PopularTopics />
 </template>
 
 <style scoped lang="scss"></style>
