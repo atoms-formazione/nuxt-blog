@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="m-4">
     <h1 class="font-serif font-bold text-4xl text-title-gray">
       Popular Topics
     </h1>
@@ -14,8 +14,9 @@
       ]"
     >
     </AtomsCardsNavBar>
-
-    <AtomsSingleCard></AtomsSingleCard>
+    <div class="m-auto">
+      <AtomsSingleCard></AtomsSingleCard>
+    </div>
   </div>
 </template>
 

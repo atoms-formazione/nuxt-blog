@@ -4,7 +4,7 @@
       <li v-for="link in links" :key="link">
         <a
           :href="'#' + link"
-          class="font-serif text-xs text-title-gray active:text-active-gold hover:text-active-gold mr-20 mt-30"
+          class="font-serif text-xs text-title-gray active:text-active-gold target:text-active-gold mr-20 mt-30"
         >
           {{ link }}
         </a>
