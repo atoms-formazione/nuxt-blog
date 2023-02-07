@@ -6,6 +6,7 @@ import TheHero from "~~/components/molecule/TheHero.vue";
   <div>
     <TheHero></TheHero>
   </div>
+  <MoleculesCardsSection></MoleculesCardsSection>
 </template>
 
 <style scoped lang="scss"></style>
