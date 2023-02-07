@@ -19,5 +19,5 @@ export default <Partial<Config>>{
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

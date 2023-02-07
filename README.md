@@ -1,3 +1,4 @@
+Figma link: https://www.figma.com/file/HGp08sSyOrDXrDBbFcY4w3/Generation-Aventure-Blog?node-id=0:1&t=Rrv2sRLavAX0ZUiL-0
 ## Features
 
 1) Nuxt 3
