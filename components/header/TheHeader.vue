@@ -5,35 +5,40 @@
  import Pinterest from "../icons/pinterest.svg"
   import Behance from "../icons/behance.svg"
 const links = reactive([
-  { name: 'Home', isActive: true },
+  { name: 'Home'},
   { name: 'About' },
   { name: 'Articles' },
   { name: 'Contact Us' },
-  { name: 'Menu' },
 ])
 </script>
 
 <template>
-    <header class="flex justify-between px-10 py-10 items-center">
-    <div class="flex justify-between gap-8">
-      <a href="/" class=" h-2 w-6 mr-8 font-Spartan">
-        RUNO
-      </a>
-
-      <nav class="hidden md:block">
-        <ul class="flex gap-8">
-          <li v-for="{ name, isActive } in links" :key="name" class="text-grey" :class="{ 'text-black': isActive }">
+    <header class=" bg-gray-400 max-w-full h-12 md:flex justify-between px-10 py-10 items-center text-white">
+    <div class="flex justify-between w-full gap-8">
+      <HeaderLogo/>
+      <nav class="hidden md:flex gap-10 ">
+        <ul class="flex flex-none gap-10">
+          <li v-for="{ name } in links" :key="name" class="cursor-pointer underline-offset-2 decoration-amber-600" >
             <a href="/">{{ name }}</a>
           </li>
         </ul>
+        <span>|</span>
+        <div class="md:flex w-full h-4 gap-3">
+        <HeaderLogoSocial :icon="Facebook" class="cursor-pointer" />
+        <HeaderLogoSocial :icon="Twiter" class="cursor-pointer" />
+        <HeaderLogoSocial :icon="Youtube" class="cursor-pointer" />
+        <HeaderLogoSocial :icon="Pinterest" class="cursor-pointer" />
+        <HeaderLogoSocial :icon="Behance" class="cursor-pointer" />
+      </div>
+      <span>|</span>
+      <div class="xs:hidden">
+      <HeaderSearchIcon class="cursor-pointer"/>
+      </div>
       </nav>
-       <HeaderLogoSocial :icon="Facebook" />
-       <HeaderLogoSocial :icon="Twiter" />
-       <HeaderLogoSocial :icon="Youtube" />
-       <HeaderLogoSocial :icon="Pinterest" />
-       <HeaderLogoSocial :icon="Behance" />
-      <div>
-      <HeaderSearchIcon></HeaderSearchIcon>
+      <div class="w-10 bg-transparent text-slate-500 mr-12 md:hidden">
+        <select name="menu" id="menu" >
+          <option value="name" v-for="{ name } in links" :key="name" class="text-grey">{{ name }}</option>
+        </select>
       </div>
     </div>  
   </header>
