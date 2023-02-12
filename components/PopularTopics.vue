@@ -1,5 +1,12 @@
 <script setup lang="ts">
-const formatted = useDateFormat('1675700830', 'DD.MM.YYYY');
+import { ref } from "vue";
+import { SingleTopic } from "~~/.nuxt/components";
+const data = ref(null);
+await fetch("https://63e1285c65b57fe60652c60f.mockapi.io/Getdata")
+  .then((res) => res.json())
+  .then((json) => (data.value = json));
+
+const formatted = useDateFormat(data.publish_date, "DD.MM.YYYY");
 const props = defineProps({
   active: String,
 });
@@ -8,20 +15,52 @@ const props = defineProps({
 <template>
   <p class="text-4xl font-bold text-[#495057]">Popular Topics</p>
   <div class="flex text-xs font-bold gap-5 text-[#495057]">
-    <p class= "active:text-[#d4a373]">All</p>
-    <p :class="{ active: active === 'adventure' }">Adventure</p>
-    <p :class="{ active: active === 'travel' }">Travel</p>
-    <p :class="{ active: active === 'fashion' }">Fashion</p>
-    <p :class="{ active: active === 'technology' }">Technology</p>
-    <p :class="{ active: active === 'branding' }">Branding</p>
+    <p
+      (click)="active = 'all'"
+      class="{ active === 'all' ? 'text-[#d4a373]' : 'text-[#495057]' }"
+    >
+      All
+    </p>
+    <p
+      (click)="active = 'adventure'"
+      class="{ active === 'adventure' ? 'text-[#d4a373]' : 'text-[#495057]' }"
+    >
+      Adventure
+    </p>
+    <p
+      (click)="active = 'travel'"
+      class="{ active === 'travel' ? 'text-[#d4a373]' : 'text-[#495057]' }"
+    >
+      Travel
+    </p>
+    <p
+      (click)="active = 'fashion'"
+      class="{ active === 'fashion' ? 'text-[#d4a373]' : 'text-[#495057]' }"
+    >
+      Fashion
+    </p>
+    <p
+      (click)="active = 'technology'"
+      class="{ active === 'technology' ? 'text-[#d4a373]' : 'text-[#495057]' }"
+    >
+      Technology
+    </p>
+    <p
+      (click)="active = 'branding'"
+      class="{ active === 'branding' ? 'text-[#d4a373]' : 'text-[#495057]' }"
+    >
+      Branding
+    </p>
   </div>
   <div>
     <SingleTopic
-      :image="'https://loremflickr.com/640/480/city'"
-      :tag="'Cameroon'"
+      v-for="topic in data?.topics"
+      v-bind:key="topic.id"
+      :image="topic.image"
+      :tag="topic.tag"
       :date="formatted"
-      :title="'Ipsum repellendus tempora fugiat. Officia corporis eum beatae quasi saepe tempora. A eos necessitatibus accusantium illo ipsam.'"
-      :text="'Consectetur saepe fugit perspiciatis magnam aspernatur veritatis qui provident. Quisquam rem laudantium aperiam facere. Non quos cupiditate ipsum non maxime aliquam consectetur facilis. Culpa asperiores doloremque praesentium magni. Sunt inventore earum error quam amet quis.\nAt nobis iure expedita nesciunt deleniti provident corporis mollitia. Ab quos et expedita cumque natus voluptas consectetur repellendus. Asperiores exercitationem atque non suscipit fugit.\nAutem accusamus quis delectus nam culpa architecto dolores animi. Libero sed voluptatibus. Itaque tempora nesciunt laudantium vero suscipit. Illum laudantium fugit odio consectetur eveniet quos facilis laudantium aliquam. Amet consequuntur iste iste illum deleniti. Assumenda veniam in assumenda ipsum.'"
+      :title="topic.title"
+      :text="topic.description"
     />
   </div>
 </template>
