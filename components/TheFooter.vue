@@ -1,18 +1,18 @@
 <template>
   <footer
-    class="absolute bottom-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+    class="absolute bottom-0 bg-bg-gray p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
   >
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+    <span class="text-sm text-text-white sm:text-center dark:text-gray-400"
       >2023 |
       <a href="https://runo.com/" class="hover:underline"
         >RUNO Publisher Studio</a
       >
     </span>
     <ul
-      class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+      class="flex flex-wrap items-center mt-3 text-sm text-text-white dark:text-gray-400 sm:mt-0"
     >
       <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6 text-bg-gray">Subscribe Now</a>
+        <a href="#" class="mr-4 hover:underline md:mr-6 text-text-white">Subscribe Now</a>
       </li>
     
     </ul>
