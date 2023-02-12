@@ -3,12 +3,15 @@ type Article = {
   title: string;
   description: string;
   image: string;
-  publish_date: number;
+  publish_date: Date;
   tag: string;
   id: string;
 };
+
+const route = useRoute();
+
 const articles: Article[] = await useFetch(
-  "https://63e1285c65b57fe60652c60f.mockapi.io/Getdata?page=1&limit=3"
+  "https://63e1285c65b57fe60652c60f.mockapi.io/Getdata?page=1&limit=4"
 )
   .then((response) => response.data.value)
   .then((json) => {
@@ -20,7 +23,7 @@ const articles: Article[] = await useFetch(
           title: element.title,
           description: element.description,
           image: element.image,
-          publish_date: element.publish_date,
+          publish_date: new Date(element.publish_date),
           tag: element.tag,
           id: element.id,
         };
@@ -29,11 +32,24 @@ const articles: Article[] = await useFetch(
     }
     //console.log(res);
     return res;
+  })
+  .then((articlesFound: Article[]) => {
+    if (!route.params.id) {
+      articlesFound.splice(3, 1);
+    } else {
+      for (let i = 0; i < articlesFound.length; i++) {
+        if (articlesFound[i].id == route.params.id[0]) {
+          articlesFound.splice(i, 1);
+          break;
+        }
+      }
+    }
+    return articlesFound;
   });
 </script>
 
 <template>
-  <div class="max-w-7xl m-auto p-2 my-36">
+  <div class="max-w-7xl m-auto p-2">
     <!--<h2 class="text-4xl font-bold text-[#495057] mb-16">Editor’s Pick</h2>-->
     <slot name="title"></slot>
     <div>

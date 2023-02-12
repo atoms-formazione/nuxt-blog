@@ -7,7 +7,8 @@ export default <Partial<Config>>{
         "editors-pick1": "url('/assets/BlogImage1.png')",
       },
       fontFamily: {
-        Lora: ["Lora", "serif"],
+        lora: ["Lora", "serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       colors: {
         "grey-title": "#495057",
