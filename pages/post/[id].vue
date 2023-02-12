@@ -29,6 +29,10 @@
       </div>
     </div>
   </div>
+
+  <div>
+    <AtomsDetailDescription></AtomsDetailDescription>
+  </div>
 </template>
 
 <script setup lang="ts">

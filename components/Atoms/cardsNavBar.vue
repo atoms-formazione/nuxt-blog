@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <ul class="flex">
       <li v-for="link in links" :key="link">
         <a
