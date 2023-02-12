@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { SingleTopic } from "~~/.nuxt/components";
+import SingleTopic from "./SingleTopic.vue";
+
 const data = ref(null);
 await fetch("https://63e1285c65b57fe60652c60f.mockapi.io/Getdata")
   .then((res) => res.json())
