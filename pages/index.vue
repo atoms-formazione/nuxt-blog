@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>This is the home page</div>
+  <Suspense> <PopularTopics /> </Suspense>
   <Suspense>
     <EditorsPickSection class="my-36">
       <template v-slot:title>

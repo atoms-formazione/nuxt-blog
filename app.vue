@@ -1,9 +1,9 @@
 <template>
-  <head>
+  <header>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -12,14 +12,9 @@
     />
   </head>
 
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <div class="font-['Lora'] not-italic">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
-
-<style>
-body {
-  font-family: "Lora", "serif";
-  font-style: normal;
-}
-</style>
