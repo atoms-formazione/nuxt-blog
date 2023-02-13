@@ -48,7 +48,7 @@ const articles: Article[] = await useFetch(
       v-bind:key="topic.id"
       :image="topic.image"
       :tag="topic.tag"
-      :date="useDateFormat(topic.publish_date, 'DD.MM.YYYY')"
+      :date="topic.publish_date"
       :title="topic.title"
       :text="topic.description"
     />
