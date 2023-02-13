@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </header>
-  <div class="font-['Lora']">
+  <div class="font-['Lora'] not-italic">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
