@@ -9,7 +9,7 @@ await fetch("https://63e1285c65b57fe60652c60f.mockapi.io/Getdata")
 
 const formatted = useDateFormat(data.publish_date, "DD.MM.YYYY");
 const props = defineProps({
-  active: String,
+  clicked: String,
 });
 </script>
 
@@ -17,7 +17,7 @@ const props = defineProps({
   <p class="text-4xl font-bold text-[#495057]">Popular Topics</p>
   <div class="flex text-xs font-bold gap-5 text-[#495057]">
     <p
-      (click)="active = 'all'"
+      v-on:click="clicked = 'all'"
       class="{ active === 'all' ? 'text-[#d4a373]' : 'text-[#495057]' }"
     >
       All
@@ -53,6 +53,7 @@ const props = defineProps({
       Branding
     </p>
   </div>
+  <pre>{{ data }}</pre>
   <div>
     <SingleTopic
       v-for="topic in data?.topics"
