@@ -22,7 +22,7 @@ const props = defineProps({
       </p>
     </div>
     <p class="text-xs font-normal text-[#6c757d] mt-5">
-      {{ date?.getDate }}.{{ date?.getMonth() + 1 }}.{{ date?.getFullYear() }}
+      {{ date?.getDate() }}.{{ date?.getMonth() + 1 }}.{{ date?.getFullYear() }}
     </p>
     <p class="text-lg font-bold max-w-xs text-justify text-[#495057] mt-5">
       {{ title }}
