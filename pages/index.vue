@@ -1,6 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
+  <TheHero />
   <Suspense> <PopularTopics /> </Suspense>
   <Suspense>
     <EditorsPickSection class="my-36">
@@ -11,4 +12,5 @@
   </Suspense>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+</style>
