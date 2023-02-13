@@ -32,9 +32,9 @@ const articles: Article[] = await useFetch(
 </script>
 
 <template>
-  <p class="text-4xl font-bold text-[#495057]">Popular Topics</p>
-  <div class="flex text-xs font-bold gap-5 text-[#495057]">
-    <p class="text-[#d4a373]">All</p>
+  <p class="text-4xl font-bold text-grey-dark">Popular Topics</p>
+  <div class="flex text-xs font-bold gap-5 text-grey-dark">
+    <p class="text-sand">All</p>
     <p>Adventure</p>
     <p>Travel</p>
     <p>Fashion</p>
@@ -42,10 +42,12 @@ const articles: Article[] = await useFetch(
     <p>Branding</p>
   </div>
 
-  <div class="grid grid-cols-4">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center items-start"
+  >
     <SingleTopic
       v-for="topic in articles"
-      v-bind:key="topic.id"
+      v-bind:id="topic.id"
       :image="topic.image"
       :tag="topic.tag"
       :date="topic.publish_date"

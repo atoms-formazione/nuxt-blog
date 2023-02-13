@@ -26,13 +26,14 @@ function truncate(val: string, len: number) {
         class="relative bg-cover bg-center editors-pick1 h-full rounded-md"
         :style="{ backgroundImage: `url(${prop.image})` }"
       >
-        <div
+        <TagCip :tag="tag" class="absolute right-5 top-5" />
+        <!--<div
           class="absolute right-5 top-5 p-2 rounded-lg w-fit bg-white/25 h-fit"
         >
           <h4 class="text-xs font-bold text-white font-roboto">
             {{ prop.tag }}
           </h4>
-        </div>
+        </div>-->
         <div class="text-white p-6 lg:p-10 absolute bottom-0">
           <small class="text-xs font-normal">{{
             prop.publish_date.getFullYear()

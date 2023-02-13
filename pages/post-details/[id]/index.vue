@@ -43,7 +43,7 @@ const article: Article = await useFetch(
     <Suspense>
       <EditorsPickSection>
         <template v-slot:title>
-          <h3 class="text-lg font-bold text-[#495057] mb-12">Related Posts</h3>
+          <h3 class="text-lg font-bold text-grey-dark mb-12">Related Posts</h3>
         </template>
       </EditorsPickSection>
     </Suspense>

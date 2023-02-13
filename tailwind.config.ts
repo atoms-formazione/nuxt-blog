@@ -11,11 +11,11 @@ export default <Partial<Config>>{
         roboto: ["Roboto", "sans-serif"],
       },
       colors: {
-        "grey-title": "#495057",
+        "grey-dark": "#495057",
+        "grey-light": "#6c757d",
+        sand: "#d4a373",
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
