@@ -9,5 +9,9 @@ export default defineNuxtConfig({
     cssPath: "@/assets/scss/main.scss",
     viewer: false,
   },
-  modules: ["vite-plugin-vue-type-imports/nuxt", "@nuxtjs/tailwindcss", '@vueuse/nuxt',],
+  modules: [
+    "vite-plugin-vue-type-imports/nuxt",
+    "@nuxtjs/tailwindcss",
+    "@vueuse/nuxt",
+  ],
 });
