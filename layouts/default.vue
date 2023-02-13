@@ -3,5 +3,5 @@
 
   <slot />
 
-  <TheFooter />
+  <FooterTheFooter />
 </template>

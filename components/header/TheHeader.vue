@@ -13,8 +13,10 @@ const links = reactive([
 </script>
 
 <template>
-    <header class=" bg-gray-400 max-w-full h-12 md:flex justify-between px-10 py-10 items-center text-white">
-    <div class="flex justify-between w-full gap-8">
+
+    <header class="max-w-full h-12 relative md:flex justify-between p-[20px] items-center text-white">
+      <div class="absolute w-full h-full z-10 opacity-20 bg-black"></div>
+    <div class="flex justify-between w-full gap-8 z-20 bg-transparent">
       <HeaderLogo/>
       <nav class="hidden md:flex gap-10 ">
         <ul class="flex flex-none gap-10">
@@ -35,8 +37,8 @@ const links = reactive([
       <HeaderSearchIcon class="cursor-pointer"/>
       </div>
       </nav>
-      <div class="w-10 bg-transparent text-slate-500 mr-12 md:hidden">
-        <select name="menu" id="menu" >
+      <div class="w-10 bg-transparent text-white mr-12 md:hidden">
+        <select name="menu" id="menu" class=" relative z-30">
           <option value="name" v-for="{ name } in links" :key="name" class="text-grey">{{ name }}</option>
         </select>
       </div>
