@@ -12,6 +12,9 @@ import TheHero from "~~/components/molecule/TheHero.vue";
   <div>
     <TheHero class="isCenter"></TheHero>
   </div>
+  <div>
+    <AtomsRelatedPosts title="Editor's Pick"></AtomsRelatedPosts>
+  </div>
 </template>
 
 <style scoped lang="scss"></style>
