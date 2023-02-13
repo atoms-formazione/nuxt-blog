@@ -2,7 +2,7 @@
 const props = defineProps({
   image: String,
   tag: String,
-  date: String,
+  date: Date,
   title: String,
   text: String,
 });
