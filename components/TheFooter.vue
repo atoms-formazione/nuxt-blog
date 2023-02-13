@@ -137,7 +137,7 @@
     >
     <div class="text-sm text-text-white sm:text-center dark:text-gray-400">
       2023 |
-      <a href="https://runo.com/" class="hover:underline"
+      <a href="#" class="hover:underline"
         >RUNO Publisher Studio</a
       >
     </div>

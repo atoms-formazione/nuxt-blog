@@ -33,6 +33,9 @@
   <div>
     <AtomsDetailDescription></AtomsDetailDescription>
   </div>
+  <div>
+    <AtomsRelatedPosts title="Related Posts"></AtomsRelatedPosts>
+  </div>
 </template>
 
 <script setup lang="ts">
