@@ -12,7 +12,7 @@
         <NuxtLink :to="`/post/${photo.id}`">
           <div class="w-78 m-10">
             <div class="w-full h-70">
-              <img :src="photo.image" :alt="photo.title" class="" />
+              <img :src="photo.image" :alt="photo.title" class="rounded" />
             </div>
             <div>
               <p class="font-serif font-normal text-xs text-title-gray mt-4">

@@ -17,7 +17,7 @@
             <img
               :src="photo.image"
               :alt="photo.title"
-              class="hover:opacity-70"
+              class="hover:opacity-70 rounded"
             />
 
             <div
