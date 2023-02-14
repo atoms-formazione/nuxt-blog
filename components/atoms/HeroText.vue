@@ -18,7 +18,9 @@
         <AtomsTag :tag="response.tag"></AtomsTag>
 
         <div class="">
-          <h1 class="font-serif text-[white] text-3xl">{{ response.title }}</h1>
+          <h1 class="font-serif text-[white] font-bold text-3xl">
+            {{ response.title }}
+          </h1>
           <div class="flex py-4">
             <p class="text-text-white">
               {{ convertiData(response.publish_date) }}
