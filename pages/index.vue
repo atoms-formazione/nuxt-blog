@@ -6,11 +6,11 @@ import TheHero from "~~/components/molecule/TheHero.vue";
   <div>
     <TheHero></TheHero>
   </div>
-  
+
   <MoleculesCardsSection></MoleculesCardsSection>
-  
+
   <div>
-    <TheHero class="isCenter"></TheHero>
+    <TheHero textAlign="isCenter"></TheHero>
   </div>
   <div>
     <AtomsRelatedPosts title="Editor's Pick"></AtomsRelatedPosts>
