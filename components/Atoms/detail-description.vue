@@ -3,9 +3,12 @@
     <p class="ml-[8%] xl:absolute xl:ml-[8%]">
       {{ convertiData(singlePost.publish_date) }}
     </p>
-    <p class="mx-[15%]">{{ singlePost.description }}</p>
+    <p class="mx-[15%]">{{ boldThirdLine(singlePost.description) }}</p>
     <p
       class="mt-8 mx-[15%] uppercase bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500 w-fit"
+      :class="{
+        'font-black': grassetto,
+      }"
     >
       {{ singlePost.tag }}
     </p>
@@ -85,6 +88,26 @@ console.log("ROUTEEE", route.params.id);
 const { data: singlePost } = await useFetch(
   `https://63e1285c65b57fe60652c60f.mockapi.io/Getdata/${route.params.id}`
 );
+
+// console.log(singlePost.value.description);
+
+const props = defineProps({
+  grassetto: Boolean,
+});
+
+function boldThirdLine(text: string) {
+  const lines = text.split(".");
+  if ((lines.length = 3)) {
+    ref(props.grassetto == true);
+    console.log("bubu");
+  } else {
+    ref(props.grassetto == false);
+  }
+}
+
+// function getTextClass({ grassetto }: Props): string {
+//   return grassetto ? "font-bold" : "lowercase";
+// }
 
 function convertiData(a: String) {
   return (a =
