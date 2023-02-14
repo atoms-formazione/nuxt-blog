@@ -16,7 +16,9 @@
       <div class="">
         <h1 class="font-serif text-[white] text-3xl">{{ response.title }}</h1>
         <div class="flex py-4">
-          <p class="text-text-white">{{ response.publish_date }}</p>
+          <p class="text-text-white">
+            {{ convertiData(response.publish_date) }}
+          </p>
 
           <hr class="w-[30px] text-text-white px-2 m-3" />
 
@@ -40,6 +42,22 @@ const props = defineProps({
 
 const isCenter = ref(props.textAlign === "center");
 const isRight = ref(props.textAlign === "right");
+
+let dat = (response.publish_date =
+  new Date().getDate() +
+  "." +
+  new Date().getMonth() +
+  "." +
+  new Date().getFullYear());
+
+function convertiData(a: String) {
+  return (a =
+    new Date().getDate() +
+    "." +
+    new Date().getMonth() +
+    "." +
+    new Date().getFullYear());
+}
 </script>
 
 <style scoped></style>
