@@ -17,7 +17,7 @@ const links = reactive([
     class="max-w-full h-12 md:flex justify-between items-center text-white absolute left-0 top-0 w-full"
   >
     <div class="absolute w-full h-full z-10 opacity-20 bg-black"></div>
-    <div class="flex justify-between w-full gap-8 z-20 p-[20px] bg-transparent">
+    <div class="flex justify-between w-full px-10 gap-8 z-20 p-[20px] bg-transparent">
       <HeaderLogo />
       <nav class="hidden md:flex gap-10">
         <ul class="flex flex-none gap-10">
@@ -42,7 +42,7 @@ const links = reactive([
           <HeaderSearchIcon class="cursor-pointer" />
         </div>
       </nav>
-      <div class="w-10 bg-transparent text-white mr-12 md:hidden">
+      <div class="w-10 bg-transparent text-slate-400 mr-12 md:hidden">
         <select name="menu" id="menu" class="relative z-30">
           <option
             value="name"

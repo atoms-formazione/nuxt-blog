@@ -32,7 +32,7 @@ function truncate(val: string, len: number) {
       </p>-->
         <TagCip :tag="tag" class="absolute right-5 top-5" />
       </div>
-      <p class="text-xs font-normal text-grey-light mt-5">
+      <p class="text-xs font-normal text-grey-light mt-5 pl-10">
         {{ date.getDate() }}.{{ date.getMonth() + 1 }}.{{ date.getFullYear() }}
       </p>
       <p class="text-lg font-bold max-w-xs text-justify text-grey-dark mt-5">
