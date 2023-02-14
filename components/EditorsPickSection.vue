@@ -44,7 +44,10 @@ const articles: Article[] = await useFetch(
         }
       }
     }
-    return articlesFound;
+
+    return articlesFound.length > 3
+      ? articlesFound.splice(3, 1)
+      : articlesFound;
   });
 </script>
 

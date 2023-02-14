@@ -8,7 +8,6 @@ import { TagCip } from '../.nuxt/components';
         src="~/assets/TheHero.png"
         class="object-cover mix-blend-overlay w-full"
       />-->
-      <TheHeader />
       <div class="relative top-64 left-2 md:top-80 md:left-20 max-w-lg">
         <TagCip :tag="'ADVENTURE'" />
         <div class="text-white not-italic text-4xl font-bold max-w-lg">

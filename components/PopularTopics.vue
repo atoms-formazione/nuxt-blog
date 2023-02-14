@@ -9,7 +9,7 @@ type Article = {
 };
 
 const articles: Article[] = await useFetch(
-  "https://63e1285c65b57fe60652c60f.mockapi.io/Getdata"
+  "https://63e1285c65b57fe60652c60f.mockapi.io/Getdata?page=1&limit=8"
 )
   .then((response) => response.data.value)
   .then((json) => {
@@ -32,8 +32,8 @@ const articles: Article[] = await useFetch(
 </script>
 
 <template>
-  <p class="text-4xl font-bold text-grey-dark">Popular Topics</p>
-  <div class="flex text-xs font-bold gap-5 text-grey-dark">
+  <p class="text-4xl font-bold text-grey-dark pl-2">Popular Topics</p>
+  <div class="flex flex-wrap text-xs font-bold gap-5 text-grey-dark pl-2">
     <p class="text-sand">All</p>
     <p>Adventure</p>
     <p>Travel</p>

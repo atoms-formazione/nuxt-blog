@@ -31,6 +31,9 @@ const article: Article = await useFetch(
 
 <template>
   <Suspense>
+    <BigPost v-bind="article" />
+  </Suspense>
+  <Suspense>
     <PostDetailsSection
       v-bind="article"
       class="mt-24 mb-14"
