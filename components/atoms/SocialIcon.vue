@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink to=""><img :src="iconUrl" /></NuxtLink>
+    <NuxtLink to=""><img :src="`require(${iconUrl})`" /></NuxtLink>
   </div>
 </template>
 
