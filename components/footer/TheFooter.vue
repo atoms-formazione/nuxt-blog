@@ -5,7 +5,6 @@ import Twiter from "../icons/twitter.svg"
 import Youtube from "../icons/youtube.svg"
 import Pinterest from "../icons/pinterest.svg"
 import Behance from "../icons/behance.svg"
-/* import FooterComponent from './FooterComponent.vue'; */
 
 </script>
 
