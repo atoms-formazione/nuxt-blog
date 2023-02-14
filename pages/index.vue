@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TheHero from "~~/components/molecule/TheHero.vue";
+import TheHero from "~~/components/molecules/TheHero.vue";
 </script>
 
 <template>
