@@ -14,7 +14,11 @@
       <NuxtLink :to="`/post/${photo.id}`">
         <div class="w-78 m-10">
           <div class="w-full h-70 relative">
-            <img :src="photo.image" :alt="photo.title" class=" hover:opacity-70" />
+            <img
+              :src="photo.image"
+              :alt="photo.title"
+              class="hover:opacity-70"
+            />
 
             <div
               class="absolute top-0 right-0 px-4 py-2 bg-gray-800 opacity-70"
@@ -25,11 +29,11 @@
                 <p>{{ photo.tag }}</p>
               </div>
             </div>
-            <div
-              class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800"
-            >
-              <h3 class="font-serif font-normal text-xs text-text-white mt-4 mb-6 w-fit">
-                {{ photo.publish_date }}
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800">
+              <h3
+                class="font-serif font-normal text-xs text-text-white mt-4 mb-6 w-fit"
+              >
+                {{ convertiData(photo.publish_date) }}
               </h3>
               <p
                 class="line-clamp-2 mt-4 font-bold text-lg leading-6 w-fit text-text-white font-bold"
@@ -59,6 +63,15 @@ const response = await fetch(
 )
   .then((res) => res.json())
   .catch((error) => error);
+
+function convertiData(a: String) {
+  return (a =
+    new Date().getDate() +
+    "." +
+    new Date().getMonth() +
+    "." +
+    new Date().getFullYear());
+}
 </script>
 
 <style scoped></style>

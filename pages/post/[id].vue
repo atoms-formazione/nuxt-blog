@@ -23,7 +23,7 @@
         <h1 class="font-serif text-[white] text-3xl">{{ singlePost.title }}</h1>
         <div class="flex py-4">
           <p class="font-serif text-text-white line-clamp-2">
-            {{ singlePost.description }}
+            {{ convertiData(singlePost.description) }}
           </p>
         </div>
       </div>
@@ -47,6 +47,15 @@ console.log("ROUTEEE", route.params.id);
 const { data: singlePost } = await useFetch(
   `https://63e1285c65b57fe60652c60f.mockapi.io/Getdata/${route.params.id}`
 );
+
+function convertiData(a: String) {
+  return (a =
+    new Date().getDate() +
+    "." +
+    new Date().getMonth() +
+    "." +
+    new Date().getFullYear());
+}
 </script>
 
 <style scoped></style>
