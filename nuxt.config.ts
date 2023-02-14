@@ -13,5 +13,6 @@ export default defineNuxtConfig({
     "vite-plugin-vue-type-imports/nuxt",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
+    "nuxt-icons",
   ],
 });

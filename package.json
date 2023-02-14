@@ -23,6 +23,7 @@
   "name": "nuxt-blog",
   "version": "0.0.0",
   "dependencies": {
-    "@tailwindcss/line-clamp": "^0.4.2"
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "nuxt-icons": "^3.1.0"
   }
 }

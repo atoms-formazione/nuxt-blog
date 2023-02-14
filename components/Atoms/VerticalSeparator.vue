@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:h-8 lg:border-l-1 border-text-white lg:w-px"></div>
+  <div class="lg:h-8 lg:w-px bg-text-white"></div>
 </template>
 
 <script setup lang="ts"></script>
