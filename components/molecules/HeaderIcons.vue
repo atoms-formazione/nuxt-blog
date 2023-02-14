@@ -1,5 +1,7 @@
 <template>
-  <div class="flex justify-around md:border-left border-text-white md:px-12">
+  <div
+    class="flex place-content-evenly lg:border-left lg:border-text-white lg:px-6 lg:gap-6"
+  >
     <AtomsSocialIcon v-for="i in socialMediaIconProps" v-bind="i" />
   </div>
 </template>
@@ -11,12 +13,24 @@ defineProps({
 
 const socialMediaIconProps = [
   {
-    iconUrl: "/assets/images/icons/facebook.svg",
+    iconUrl: "/images/icons/facebook.svg",
     urlPath: "https://it-it.facebook.com/",
   },
   {
-    iconUrl: "./assets/images/icons/pinterest-icon.png",
-    urlPath: "https://it-it.facebook.com/",
+    iconUrl: "/images/icons/twitter.svg",
+    urlPath: "https://twitter.com",
+  },
+  {
+    iconUrl: "/images/icons/youtube.svg",
+    urlPath: "https://youtube.com",
+  },
+  {
+    iconUrl: "/images/icons/pinterest.svg",
+    urlPath: "https://www.pinterest.it/",
+  },
+  {
+    iconUrl: "/images/icons/behance.svg",
+    urlPath: "https://www.behance.net/",
   },
 ];
 </script>

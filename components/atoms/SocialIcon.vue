@@ -1,6 +1,8 @@
 <template>
   <div>
-    <NuxtLink to=""><img :src="`require(${iconUrl})`" /></NuxtLink>
+    <NuxtLink class="h-30" :to="urlPath"
+      ><img :src="iconUrl" class="h-full"
+    /></NuxtLink>
   </div>
 </template>
 
