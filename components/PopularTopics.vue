@@ -32,8 +32,8 @@ const articles: Article[] = await useFetch(
 </script>
 
 <template>
-  <p class="text-4xl font-bold text-grey-dark pl-2">Popular Topics</p>
-  <div class="flex flex-wrap text-xs font-bold gap-5 text-grey-dark pl-2">
+  <p class="text-4xl font-bold text-grey-dark px-10">Popular Topics</p>
+  <div class="flex flex-wrap text-xs font-bold gap-10 text-grey-dark px-10 my-8">
     <p class="text-sand">All</p>
     <p>Adventure</p>
     <p>Travel</p>
