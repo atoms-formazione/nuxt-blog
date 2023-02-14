@@ -9,7 +9,7 @@
 
       <!-- <pre>{{ response }}</pre> -->
       <div
-        class="z-20 col-span-4 md:col-span-6 fonr-serif flex flex-col"
+        class="z-20 col-span-4 md:col-span-6 font-serif flex flex-col"
         :class="{
           'items-center md:col-start-4': isCenter,
           'items-end': isRight,
@@ -18,7 +18,9 @@
         <AtomsTag :tag="response.tag"></AtomsTag>
 
         <div class="">
-          <h1 class="font-serif text-[white] text-3xl">{{ response.title }}</h1>
+          <h1 class="font-serif text-[white] font-bold text-3xl">
+            {{ response.title }}
+          </h1>
           <div class="flex py-4">
             <p class="text-text-white">
               {{ convertiData(response.publish_date) }}
