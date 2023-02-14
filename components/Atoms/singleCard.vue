@@ -16,7 +16,7 @@
             </div>
             <div>
               <p class="font-serif font-normal text-xs text-title-gray mt-4">
-                {{ photo.publish_date }}
+                {{ convertiData(photo.publish_date) }}
               </p>
               <p class="line-clamp-2 mt-4 font-bold text-lg leading-6 w-fit">
                 {{ photo.title }}
@@ -42,6 +42,25 @@ const response = await fetch(
   .catch((error) => error);
 // console.log("response", response.Getdata);
 // console.log("AAAA", response);
+
+// let dat = (response.publish_date =
+//   new Date().getDate() +
+//   "." +
+//   new Date().getMonth() +
+//   "." +
+//   new Date().getFullYear());
+
+function convertiData(a: String) {
+  return (a =
+    new Date().getDate() +
+    "." +
+    new Date().getMonth() +
+    "." +
+    new Date().getFullYear());
+}
+
+// var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+// d.setUTCSeconds(response.publish_date);
 </script>
 
 <style scoped></style>

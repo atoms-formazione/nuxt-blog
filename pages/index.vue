@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import TheHero from "~~/components/molecule/TheHero.vue";
+import TheHero from "~~/components/molecules/TheHero.vue";
 </script>
 
 <template>
   <div>
     <TheHero></TheHero>
   </div>
-  
+
   <MoleculesCardsSection></MoleculesCardsSection>
-  
+
   <div>
-    <TheHero class="isCenter"></TheHero>
+    <TheHero :hero-data="{ textAlign: 'center' }" />
   </div>
   <div>
     <AtomsRelatedPosts title="Editor's Pick"></AtomsRelatedPosts>

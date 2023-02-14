@@ -1,13 +1,15 @@
 <template>
   <div>
     <Suspense>
-      <HeroText text-align=""></HeroText>
+      <AtomsHeroText v-bind="heroData" />
     </Suspense>
   </div>
 </template>
 
 <script setup lang="ts">
-import HeroText from "../atoms/HeroText.vue";
+defineProps({
+  heroData: {},
+});
 </script>
 
 <style scoped></style>

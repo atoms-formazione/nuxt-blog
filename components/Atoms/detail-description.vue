@@ -1,6 +1,8 @@
 <template>
-    <div class="my-[5%]">
-      <p class=" ml-[8%] xl:absolute xl:ml-[8%] ">{{ singlePost.publish_date }}</p>
+  <div class="my-[5%]">
+    <p class="ml-[8%] xl:absolute xl:ml-[8%]">
+      {{ convertiData(singlePost.publish_date) }}
+    </p>
     <p class="mx-[15%]">{{ singlePost.description }}</p>
     <p
       class="mt-8 mx-[15%] uppercase bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500 w-fit"
@@ -83,6 +85,15 @@ console.log("ROUTEEE", route.params.id);
 const { data: singlePost } = await useFetch(
   `https://63e1285c65b57fe60652c60f.mockapi.io/Getdata/${route.params.id}`
 );
+
+function convertiData(a: String) {
+  return (a =
+    new Date().getDate() +
+    "." +
+    new Date().getMonth() +
+    "." +
+    new Date().getFullYear());
+}
 </script>
 
 <style scoped></style>
