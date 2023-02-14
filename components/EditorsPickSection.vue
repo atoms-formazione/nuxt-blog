@@ -52,7 +52,7 @@ const articles: Article[] = await useFetch(
 </script>
 
 <template>
-  <div class="max-w-7xl m-auto p-2">
+  <div class="max-w-7xl m-auto pt-2 pb-2 px-10">
     <slot name="title"></slot>
     <div>
       <div

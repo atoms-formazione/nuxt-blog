@@ -12,7 +12,7 @@ import Behance from "../icons/behance.svg"
 
 <template>
   <footer>
-    <div class="sm:flex block md:flex justify-between px-8 bg-[#212529] pt-10 ">
+    <div class="sm:flex block md:flex justify-between px-10 bg-[#212529] pt-10 ">
       <FooterComponent 
       :title="'Contact the Publisher'" 
       :item1="'mike@runo.com'" 
@@ -40,7 +40,7 @@ import Behance from "../icons/behance.svg"
         </div>
       </div>
     </div>
-    <div class="sm:flex block text-[#E5E5E5] bg-[#343A40]  px-[2rem] md:flex justify-between">
+    <div class="sm:flex block text-[#E5E5E5] bg-[#343A40]  px-10 md:flex justify-between">
       <p>2021 | RUNO Publisher Studio</p>
       <p>Subscribe Now</p>
     </div>

@@ -12,7 +12,7 @@ const prop = defineProps<Article>();
 </script>
 
 <template>
-  <div class="p-2 max-w-4xl m-auto relative">
+  <div class="p-2 px-10 max-w-4xl m-auto relative">
     <div class="xl:absolute -left-44 top-3 mb-6">
       <p class="text-grey-dark font-bold text-sm inline-block">
         {{ publish_date.getDate() }}.{{ publish_date.getMonth() + 1 }}.{{
