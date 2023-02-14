@@ -39,8 +39,9 @@
 <script setup lang="ts">
 const response = await fetch(
   "https://63e1285c65b57fe60652c60f.mockapi.io/Getdata/1"
-).then((res) => res.json());
-
+)
+  .then((res) => res.json())
+  .catch((error) => console.error("ERROREEEEEEE:", error));
 const props = defineProps({
   textAlign: String,
 });

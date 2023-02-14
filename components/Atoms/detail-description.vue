@@ -3,7 +3,14 @@
     <p class="ml-[8%] xl:absolute xl:ml-[8%]">
       {{ convertiData(singlePost.publish_date) }}
     </p>
-    <p class="mx-[15%]">{{ boldThirdLine(singlePost.description) }}</p>
+    <p class="mx-[15%]">{{ firstLine(singlePost.description) }}</p>
+
+    <br />
+    <p class="mx-[15%] font-bold text-4xl font-serif text-active-gold">
+      "{{ boldThirdLine(singlePost.description) }}"
+    </p>
+    <br />
+    <p class="mx-[15%]">{{ lastLine(singlePost.description) }}</p>
     <p
       class="mt-8 mx-[15%] uppercase bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500 w-fit"
       :class="{
@@ -95,14 +102,31 @@ const props = defineProps({
   grassetto: Boolean,
 });
 
+function firstLine(text: string) {
+  const lines = text.split(".");
+  return lines.slice(0, 2).toLocaleString().replace(",", ".");
+}
+
+function lastLine(text: string) {
+  const lines = text.split(".");
+  return lines.slice(3, lines.length).toLocaleString().replace(",", ".");
+}
 function boldThirdLine(text: string) {
   const lines = text.split(".");
-  if ((lines.length = 3)) {
-    ref(props.grassetto == true);
-    console.log("bubu");
-  } else {
-    ref(props.grassetto == false);
-  }
+  // let nuovoArray = lines.slice(0, 1);
+  return lines[2];
+  // let finalArray = lines.slice(3, lines.length);
+  // if ((lines.length = 3)) {
+  //   // lines[3] = "BUAUAUAUAUUAUA";
+  //   // props.grassetto == true;
+  //   console.log("YOOO", props.grassetto);
+  //   console.log("bubu", lines);
+  //   return lines[3];
+  // } else {
+  //   // props.grassetto == false;
+  //   console.log("YOOO", lines[3]);
+  //   return lines;
+  // }
 }
 
 // function getTextClass({ grassetto }: Props): string {
