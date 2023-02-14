@@ -4,13 +4,13 @@ import TheHero from "~~/components/molecules/TheHero.vue";
 
 <template>
   <div>
-    <TheHero></TheHero>
+    <AtomsTheHero />
   </div>
 
   <MoleculesCardsSection></MoleculesCardsSection>
 
   <div>
-    <TheHero :hero-data="{ textAlign: 'center' }" />
+    <AtomsTheHero :hero-data="{ textAlign: 'center' }" />
   </div>
   <div>
     <AtomsRelatedPosts title="Editor's Pick"></AtomsRelatedPosts>
