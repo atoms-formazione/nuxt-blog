@@ -8,7 +8,7 @@ interface Article {
   id: string;
 }
 
-const prop = defineProps<Article>();
+defineProps<Article>();
 </script>
 
 <template>
@@ -30,7 +30,7 @@ const prop = defineProps<Article>();
     <div class="flex justify-between flex-wrap content-around">
       <div>
         <img
-          src="../assets/Ellipse 4.png"
+          src="../assets/Ellipse4.png"
           alt="Profile"
           class="inline-block mr-4 bg-transparent"
         />
